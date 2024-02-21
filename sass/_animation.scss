@@ -1,0 +1,59 @@
+// Loader
+
+$circle-primary-color: rgb(147, 86, 220);
+$circle-secondary-color: rgb(255, 121, 218);
+
+.circle-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: white;
+  animation: spin-container 3s linear forwards;
+  .circle {
+    border: 10px solid rgba($circle-primary-color, 0.4);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    /*placement loader en milieu de page*/
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    &__loader::after {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      bottom: -10px;
+      right: -10px;
+      border: 10px solid transparent;
+      border-top-color: $circle-secondary-color;
+      border-radius: 50%;
+      animation: spin 1s linear 0s 5; /*tourne de suite à 1s sans delay 0s et 5 tours*/
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-container {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -9999;
+  }
+}
