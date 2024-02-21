@@ -1,16 +1,12 @@
 // Loader
-
-$circle-primary-color: rgb(147, 86, 220);
-$circle-secondary-color: rgb(255, 121, 218);
-
 .circle-container {
   width: 100vw;
   height: 100vh;
   position: fixed;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.7);
   animation: spin-container 3s linear forwards;
   .circle {
-    border: 10px solid rgba($circle-primary-color, 0.4);
+    border: 10px solid rgba($primary-color, 0.4);
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -29,7 +25,7 @@ $circle-secondary-color: rgb(255, 121, 218);
       bottom: -10px;
       right: -10px;
       border: 10px solid transparent;
-      border-top-color: $circle-secondary-color;
+      border-top-color: $secondary-color;
       border-radius: 50%;
       animation: spin 1s linear 0s 5; /*tourne de suite à 1s sans delay 0s et 5 tours*/
     }
@@ -57,3 +53,5 @@ $circle-secondary-color: rgb(255, 121, 218);
     z-index: -9999;
   }
 }
+
+// animation menu + bouton vert à droite
