@@ -1,0 +1,22 @@
+/*Footer*/
+.link-container {
+    background-color: $footer-background;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: start;
+    color: $footer-color;
+    padding: 22px 0 22px 25px;
+    img {
+        width: 137px;
+        height: 27px;
+        margin-bottom: 16px;
+    }
+    .link {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+     
+}
