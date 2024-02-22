@@ -1,22 +1,73 @@
-/*Variables textes, couleur, taille body, etc..*/
-*{
-    box-sizing: border-box;
-    margin: 0 auto;
-    font-family: "Roboto", sans-serif;
+// VARIABLES
+// couleurs
+$text-color: #000000;
+$primary-color: #9356dc;
+$secondary-color: #ff79da;
+$tertiary-color: #99e2d0;
+$cta-color: #ffffff;
+$card-background: #f6f6f6;
+$footer-background: #353535;
+$footer-color: #ffffff;
+$form-color: #353535;
+$form-background: #eaeaea;
+$card-icon-color: #7e7e7e;
+
+// MIXIN
+// Police - mobile
+@mixin index($size: 1.6rem, $weight: 500) {
+  font-family: "Roboto", sans-serif;
+  font-weight: $weight;
+  font-style: normal;
+  font-size: $size;
 }
 
-html{
-    font-size: 62.5%;
+@mixin menus {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.8rem;
 }
 
-a{
-    text-decoration: none;
-    color: inherit;
+@mixin cta($width: 218px) {
+  color: $cta-color;
+  background: linear-gradient($secondary-color, $primary-color);
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  width: $width;
+  height: 50px;
+  border: transparent;
 }
 
-// Typographie et différentes tailles de texte
+// @mixin flexbox ?
+
+// CLASSES GENERALES
+* {
+  box-sizing: border-box;
+  margin: 0;
+  
+}
+
+html {
+  font-size: 62.5%;
+  @include index;
+}
 
 
-// Créer mixin pour CTA
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
+.cta {
+  @include cta // + ajouter un lighten hover
+;
+}
 
+.img-card {
+  width: 346px;
+  height: 231px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+// Police pour version desktop
