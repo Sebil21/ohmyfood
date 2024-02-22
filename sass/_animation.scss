@@ -53,5 +53,9 @@
     z-index: -9999;
   }
 }
+// Animation des boutons
+.cta {
+  @include cta; // + ajouter un lighten hover
+}
 
 // animation menu + bouton vert à droite
