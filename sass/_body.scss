@@ -11,10 +11,11 @@ $footer-color: #ffffff;
 $form-color: #353535;
 $form-background: #eaeaea;
 $card-icon-color: #7e7e7e;
+$button-color: linear-gradient(170deg, $secondary-color 10%, $primary-color 60%);
 
 // MIXIN
 // Police - mobile
-@mixin index($size: 1.6rem, $weight: 500) {
+@mixin index($size: 1rem, $weight: 500) {
   font-family: "Roboto", sans-serif;
   font-weight: $weight;
   font-style: normal;
@@ -25,46 +26,64 @@ $card-icon-color: #7e7e7e;
   font-family: "Shrikhand", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 2.8rem;
+  font-size: 1.75rem;
 }
 
 @mixin cta($width: 218px) {
-  color: $cta-color;
-  background: linear-gradient($secondary-color, $primary-color);
-  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.25);
-  border-radius: 25px;
-  width: $width;
-  height: 50px;
-  border: transparent;
-}
-
+    color: $cta-color;
+    background: $button-color;
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    width: $width;
+    height: 50px;
+    border: transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0.8;
+  }
 // @mixin flexbox ?
 
 // CLASSES GENERALES
 * {
   box-sizing: border-box;
   margin: 0;
-  
 }
 
 html {
-  font-size: 62.5%;
   @include index;
 }
 
+.fa-location-dot {
+  font-size: 16px;
+}
+
+.fa-mobile-screen-button {
+  font-size: 19px;
+}
+.fa-list-ul {
+  font-size: 16px;
+}
+.fa-store {
+  font-size: 18px;
+}
+.fa-heart {
+  font-size: 21px;
+}
 
 a {
   text-decoration: none;
   color: inherit;
 }
-
-.cta {
-  @include cta // + ajouter un lighten hover
-;
+.main-title {
+  @include index($size: 1.5rem, $weight: 700);
 }
 
+
 .img-card {
-  width: 346px;
+  width: 100%;
   height: 231px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;

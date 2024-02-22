@@ -1,36 +1,18 @@
-/*Contenu global*/
-$circle-primary-color: rgb(147, 86, 220);
-$circle-secondary-color: rgb(255, 121, 218);
+/*Contenu global index.html*/
 
-.circle {
-  border: 10px solid rgba($circle-primary-color, 0.4);
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  /*placement loader en milieu de page*/
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  &__loader::after {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    bottom: -10px;
-    right: -10px;
-    border: 10px solid transparent;
-    border-top-color: $circle-secondary-color;
-    border-radius: 50%;
-    animation: spin 1s linear 0s infinite;
+.main-section {
+  background-color: #f6f6f6;
+  padding: 39px 26px 57px 34px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  & > .main-title {
+    width: 275px;
+    height: 68px;
+  }
+  & > p {
+    padding-bottom: 27px;
+    @include index ($size: 1.125rem, $weight: 300)
   }
 }
-
-@keyframes spin{
-    0%{ transform: rotate(0deg);
-    }
-    100%{ transform: rotate(360deg);
-    }
-  }
