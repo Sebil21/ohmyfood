@@ -1,5 +1,5 @@
 /*Contenu global index.html*/
-
+/*Section principale*/
 .main-section {
   background-color: #f6f6f6;
   padding: 39px 26px 57px 34px;
@@ -13,6 +13,89 @@
   }
   & > p {
     padding-bottom: 27px;
-    @include index ($size: 1.125rem, $weight: 300)
+    @include index($size: 1.125rem, $weight: 300);
+  }
+}
+
+.fonctionnement-and-restaurants {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 48px;
+  & .title {
+    margin-bottom: 26px;
+    padding-left: 20px;
+  }
+}
+/*Section fonctionnement*/
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    width: 300px;
+    height: 72.4px;
+    position: relative;
+    background-color: $card-background;
+    box-shadow: $card-box-shadow;
+    gap: 30px;
+  }
+  &__card--number {
+    background-color: $primary-color;
+    color: white;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: -16px;
+  }
+}
+/*Section restaurants*/
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 0 18px 66px 18px;
+  &__card {
+    background-color: white;
+    border-radius: 15px;
+    height: 251px;
+    position: relative;
+  }
+  .new-item {
+    position: absolute;
+    top: 10px;
+    left: 250px;
+    background-color: $tertiary-color;
+    color: $new-item-color;
+    padding: 7px 9px;
+    @include index($size: 0.875rem);
+    border-radius: 2px;
+  }
+}
+
+.card-contain {
+  width: 100%;
+  padding: 14px 25px 12px 13px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: nowrap;
+  h3 {
+    @include index($size: 1.125rem, $weight: 700);
+  }
+  p {
+    @include index($size: 1.063rem, $weight: 300);
   }
 }
