@@ -21,42 +21,48 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding-top: 48px;
-  & .title {
+  padding-top: 20px;
+  // padding: 20px 20px;
+  & .title-one {
     margin-bottom: 26px;
-    padding-left: 20px;
+    padding: 28px 0 0 20px;
   }
 }
 /*Section fonctionnement*/
 .fonctionnement {
+  padding: 20px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   &__card {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: baseline;
     align-items: center;
     margin-bottom: 25px;
+    padding-left: 35px;
     border-radius: 20px;
-    width: 300px;
+    width: 322px;
     height: 72.4px;
     position: relative;
     background-color: $card-background;
-    box-shadow: $card-box-shadow;
-    gap: 30px;
+    box-shadow: $box-shadow;
+    gap: 27px;
   }
   &__card--number {
     background-color: $primary-color;
     color: white;
     border-radius: 50%;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 24px;
+    height: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    left: -16px;
+    left: -10px;
+  }
+  i:hover {
+    color: $primary-color;
   }
 }
 /*Section restaurants*/
@@ -65,14 +71,20 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  align-items: center;
   gap: 18px;
   padding: 0 18px 66px 18px;
   &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: white;
     border-radius: 15px;
+    width: 340px;
     height: 251px;
     position: relative;
   }
+
   .new-item {
     position: absolute;
     top: 10px;
@@ -89,13 +101,8 @@
   width: 100%;
   padding: 14px 25px 12px 13px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-content: center;
-  flex-wrap: nowrap;
-  h3 {
-    @include index($size: 1.125rem, $weight: 700);
-  }
-  p {
-    @include index($size: 1.063rem, $weight: 300);
-  }
+  gap: 5px;
 }
+
