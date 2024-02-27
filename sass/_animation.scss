@@ -55,7 +55,31 @@
 }
 // Animation des boutons
 .cta {
-  @include cta; // + ajouter un lighten hover
+  @include cta;
+  &:hover {
+    opacity: 0.8;
+  }
 }
+
+// Animation coeur
+.fa-heart {
+  position: absolute;
+  right: 16px;
+  top: 80%;
+  
+}
+
+.full-heart {
+opacity: 0;
+transition: all 3s;
+&:hover{
+opacity: 1;
+background-image: $button-color;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+
+}
+}
+
 
 // animation menu + bouton vert à droite
