@@ -3,7 +3,7 @@
   background-color: $dark-grey;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   color: $light-text-color;
   padding: 22px 25px;
   img {
@@ -15,7 +15,32 @@
   .link {
     display: flex;
     flex-direction: column;
-    text-align: justify;
     gap: 7px;
+  }
+}
+
+/*TABLETTE RESPONSIVE*/
+@media screen and (min-width: 768px) {
+  .link-container {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    img {
+      margin-bottom: 0;
+    }
+    .link {
+      flex-direction: row;
+      width: 100%;
+      justify-content: flex-end;
+      padding-right: 30px;
+    }
+  }
+}
+/*DESKTOP RESPONSIVE*/
+@media screen and (min-width: 1024px){
+.link-container {
+  .link {
+    padding-right: 50px;
+    gap: 30px;
+  }
   }
 }
