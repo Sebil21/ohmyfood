@@ -3,7 +3,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 14px 89px;
   height: 63px;
   &__OMF {
     width: 162px;
@@ -17,7 +16,6 @@
   justify-content: center;
   align-items: center;
   height: 50px;
-  box-shadow: 0 4px 0px 4px rgba(0,0,0, 0.75);
   background-color: $form-background;
   gap: 17px;
   input {
@@ -31,3 +29,11 @@
     color: $dark-grey;
   }
 }
+
+/*TABLETTE RESPONSIVE - OK*/
+// @media screen and (min-width: 768px){
+// }
+
+/*DESKTOP RESPONSIVE - OK*/
+// @media screen and (min-width: 1024px){
+// }
