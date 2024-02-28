@@ -7,8 +7,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  & > .main-title {
-    width: 275px;
+  &__title {
     height: 68px;
   }
   & > p {
@@ -22,6 +21,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   padding-top: 20px;
+  align-items: center;
   // padding: 20px 20px;
   & .title-one {
     margin-bottom: 26px;
@@ -29,11 +29,22 @@
   }
 }
 /*Section fonctionnement*/
+.fonctionnement-container{
+  width: 100%;
+}
 .fonctionnement {
   padding: 20px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  a{
+    width: 100%;
+    &:hover{
+      i{
+          color: $primary-color;
+      }
+    }
+  }
   &__card {
     display: flex;
     flex-direction: row;
@@ -42,7 +53,7 @@
     margin-bottom: 25px;
     padding-left: 35px;
     border-radius: 20px;
-    width: 322px;
+    width: 100%;
     height: 72.4px;
     position: relative;
     background-color: $card-background;
@@ -61,15 +72,24 @@
     position: absolute;
     left: -10px;
   }
-  i:hover {
-    color: $primary-color;
-  }
 }
+
 /*Section restaurants*/
 
+.restaurants-container {
+  background-color: $card-background;
+  margin-top: 43px;
+  width: 100%;
+  .title {
+    padding-left: 20px;
+    padding-bottom: 24px;
+    margin-top: 54px;
+  }
+}
 .restaurants {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
   gap: 18px;
@@ -80,15 +100,17 @@
     align-items: center;
     background-color: white;
     border-radius: 15px;
-    width: 340px;
+    width: 100%;
     height: 251px;
     position: relative;
   }
-
+  a{
+    width: 100%;
+  }
   .new-item {
     position: absolute;
     top: 10px;
-    left: 250px;
+    right: 10px;
     background-color: $tertiary-color;
     color: $new-item-color;
     padding: 7px 9px;
@@ -106,3 +128,57 @@
   gap: 5px;
 }
 
+/*TABLETTE RESPONSIVE*/
+@media screen and (min-width: 768px){
+  .fonctionnement{
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    a{
+      width: 30%;
+    }
+  }
+  .restaurants {
+    flex-direction: row;
+    a{
+      width: 48%;
+    }
+}
+}
+
+
+// /*DESKTOP RESPONSIVE*/
+@media screen and (min-width: 1024px) {
+  .main-section {
+    padding-bottom: 30px;
+    & .title-one {
+      padding-top: 50px;
+    }
+  }
+
+  .fonctionnement-and-restaurants {
+    align-items: center;
+  }
+  .fonctionnement-container{
+    padding: 0 180px;
+  }
+  .fonctionnement {
+    padding: 0 auto;
+  }
+
+
+  .restaurants-container {
+    .title {
+      margin-top: 30px;
+      padding-left: 180px;
+    }
+  }
+  .restaurants{
+    padding: 0 180px;
+    gap: 0;
+    a{
+      width: 45%;
+      margin-bottom: 50px;
+    }
+  }
+}
