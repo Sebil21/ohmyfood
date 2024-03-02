@@ -55,33 +55,111 @@
     z-index: -9999;
   }
 }
-// Animation des boutons
+// Animation CTA index et restaurants
 .cta {
   @include cta;
+
   &:hover {
     opacity: 0.8;
+    box-shadow: darken ($button-shadow, 1);
+  }
+}
+// Taille CTA pour pages restaurants
+.cta-position {
+  display: flex;
+  justify-content: center;
+  .order {
+    @include cta($width: 186px);
   }
 }
 
 // Animation coeur
-.fa-heart {
-  position: absolute;
-  right: 16px;
-  top: 80%;
-  
+.card-contain {
+  .fa-heart {
+    position: absolute;
+    right: 16px;
+    top: 80%;
+  }
 }
 
 .full-heart {
-opacity: 0;
-background-image: $button-color;
-background-clip: text;
--webkit-text-fill-color: transparent;
-transition: all 1s;
-&:hover{
-opacity: 1;
-transition: all 3s;
-}
+  opacity: 0;
+  background-image: $button-color;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 2s;
+  &:hover {
+    opacity: 1;
+    transition: all 2s;
+  }
 }
 
+// Animation bouton vert
+.menu__card {
+  &--check {
+    background-color: $tertiary-color;
+    width: 60px;
+    height: 70px;
+    border-radius: 0 15px 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0.5px;
+    opacity: 0;
+  }
+  &:hover &--check {
+    animation: checkbox 1s;
+  }
+}
 
-// animation menu + bouton vert à droite
+@keyframes checkbox {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    opacity: 1;
+    width: 15%;
+  }
+}
+
+// Animation menu__card
+.delay-1 {
+  animation: slideup 1s ease both;
+}
+.delay-2 {
+  animation: slideup 2s ease both;
+}
+.delay-3 {
+  animation: slideup 3s ease both;
+}
+.delay-4 {
+  animation: slideup 4s ease both;
+}
+.delay-5 {
+  animation: slideup 5s ease both;
+}
+.delay-6 {
+  animation: slideup 6s ease both;
+}
+.delay-7 {
+  animation: slideup 7s ease both;
+}
+.delay-8 {
+  animation: slideup 8s ease both;
+}
+.delay-9 {
+  animation: slideup 9s ease both;
+}
+
+@keyframes slideup {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
