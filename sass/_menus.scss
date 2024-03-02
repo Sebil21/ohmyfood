@@ -1,0 +1,46 @@
+/*Menus*/
+.restaurant__container {
+  background: rgb(247, 209, 209);
+  width: 100%;
+  border-radius: 40px 40px 0 0;
+  position: relative;
+  padding: 32px 13px 40px 13px;
+  margin-top: -60px;
+  &--title {
+  @include restaurant-title;
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px;
+  .fa-heart {
+    position: absolute;
+    cursor: pointer;
+    right: 10%;
+  }
+}
+}
+
+.menu-container{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 40px;
+}
+
+.menu__card {
+  cursor: pointer;
+&--description {
+  box-shadow: $box-shadow;
+  background: white;
+  border-radius: 15px;
+  height: 69px;
+  padding: 15px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+&--price{
+align-self: flex-end;
+}
+}
+
