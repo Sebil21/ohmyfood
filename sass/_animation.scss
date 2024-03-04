@@ -61,7 +61,7 @@
 
   &:hover {
     opacity: 0.8;
-    box-shadow: darken ($button-shadow, 1);
+    box-shadow: darken ($button-shadow, 0.35);
   }
 }
 // Taille CTA pour pages restaurants
@@ -96,6 +96,7 @@
 
 // Animation bouton vert
 .menu__card {
+  position: relative;
   &--check {
     background-color: $tertiary-color;
     width: 60px;
@@ -105,7 +106,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    right: 0.5px;
+    right: 0;
     opacity: 0;
   }
   &:hover &--check {
@@ -126,31 +127,31 @@
 
 // Animation menu__card
 .delay-1 {
-  animation: slideup 1s ease both;
+  animation: slideup 1s;
 }
 .delay-2 {
-  animation: slideup 2s ease both;
+  animation: slideup 2s;
 }
 .delay-3 {
-  animation: slideup 3s ease both;
+  animation: slideup 3s;
 }
 .delay-4 {
-  animation: slideup 4s ease both;
+  animation: slideup 4s;
 }
 .delay-5 {
-  animation: slideup 5s ease both;
+  animation: slideup 5s;
 }
 .delay-6 {
-  animation: slideup 6s ease both;
+  animation: slideup 6s;
 }
 .delay-7 {
-  animation: slideup 7s ease both;
+  animation: slideup 7s;
 }
 .delay-8 {
-  animation: slideup 8s ease both;
+  animation: slideup 8s;
 }
 .delay-9 {
-  animation: slideup 9s ease both;
+  animation: slideup 9s;
 }
 
 @keyframes slideup {
