@@ -1,46 +1,84 @@
 /*Menus*/
 .restaurant__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background: $card-background;
   width: 100%;
   border-radius: 40px 40px 0 0;
   position: relative;
   padding: 32px 13px 40px 13px;
-  margin-top: -60px;
+  margin-top: -50px;
   &--title {
-  @include restaurant-title;
-  display: flex;
-  align-items: center;
-  padding-bottom: 30px;
-  .fa-heart {
-    position: absolute;
-    cursor: pointer;
-    right: 10%;
+    @include restaurant-title;
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    padding-bottom: 40px;
+    .fa-heart {
+      position: absolute;
+      cursor: pointer;
+      right: 10%;
+    }
   }
 }
-}
 
-.menu-container{
+.menu-container {
   display: flex;
   flex-direction: column;
   gap: 12px;
   padding-bottom: 40px;
+  width: 100%;
 }
 
 .menu__card {
   cursor: pointer;
-&--description {
-  box-shadow: $box-shadow;
   background: white;
   border-radius: 15px;
-  height: 69px;
-  padding: 15px 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: nowrap;
+  box-shadow: $card-shadow;
+  &--description {
+    height: 69px;
+    padding: 15px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+  &--price {
+    align-self: flex-end;
+  }
 }
-&--price{
-align-self: flex-end;
-}
-}
+
+
+/*TABLETTE RESPONSIVE*/
+@media screen and (min-width: 768px){
+  .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .restaurant__container {
+    justify-content: center;
+    width: 70%;
+    &--title {
+      align-self: center;
+      .fa-heart {
+        right: 15%;
+      }
+    }
+  }
+  .menu-container {
+    width: 70%;
+  }
+  }
+
+// /*DESKTOP RESPONSIVE*/
+@media screen and (min-width: 1024px) {
+  .restaurant__container {
+      .fa-heart {
+        right: 30%;
+      }
+    }
+  }
 
