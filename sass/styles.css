@@ -435,7 +435,6 @@ a {
 .fonctionnement__card {
   display: flex;
   flex-direction: row;
-  justify-content: baseline;
   align-items: center;
   margin-bottom: 25px;
   padding-left: 35px;
