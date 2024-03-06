@@ -39,14 +39,26 @@
   box-shadow: $card-shadow;
   &--description {
     height: 69px;
-    padding: 15px 15px;
+    padding: 15px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: nowrap;
   }
+  &--title{
+    width: 85%;
+    padding-left: 10px;
+    .overflow {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+  
+    }
+  }
   &--price {
     align-self: flex-end;
+    width: 10%;
+    text-align: center;
   }
 }
 

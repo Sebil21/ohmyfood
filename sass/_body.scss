@@ -12,6 +12,7 @@ $card-icon-color: #7e7e7e;
 $card-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 $button-color: linear-gradient(180deg, $secondary-color, $primary-color);
 $button-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+$dark-button-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.7);
 $new-item-color: #008766;
 
 // MIXIN
@@ -150,7 +151,7 @@ p{
   @include index($size: 0.90rem, $weight: 300)
 }
 .menu__card--price {
-  @include index($size: 0.94rem, $weight: 700)
+  @include index($size: 0.92rem, $weight: 700)
 }
 }
 

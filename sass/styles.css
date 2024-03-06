@@ -139,7 +139,7 @@ a {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 0.94rem;
+  font-size: 0.92rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -226,7 +226,7 @@ a {
 }
 .cta:hover {
   opacity: 0.8;
-  box-shadow: darken 0 4px 10px 0 rgba(0, 0, 0, 0.25), 0.35;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.7);
 }
 
 .cta-position {
@@ -251,6 +251,11 @@ a {
   font-size: 1rem;
 }
 
+.order:hover {
+  opacity: 0.8;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.7);
+}
+
 .card-contain .fa-heart {
   position: absolute;
   right: 16px;
@@ -270,33 +275,34 @@ a {
   transition: all 2s;
 }
 
-.menu__card {
-  position: relative;
-}
 .menu__card--check {
   background-color: #99e2d0;
-  width: 60px;
+  width: 0;
   height: 70px;
   border-radius: 0 15px 15px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  right: 0;
   opacity: 0;
+  transition: all 1s ease;
 }
 .menu__card:hover .menu__card--check {
-  animation: checkbox 1s;
+  opacity: 1;
+  width: 15%;
+  transition: all 1s ease;
+}
+.menu__card:hover .menu__card--title {
+  width: 70%;
 }
 
-@keyframes checkbox {
-  from {
+@keyframes slideup {
+  0% {
+    transform: translateY(30px);
     opacity: 0;
-    width: 0;
   }
-  to {
+  100% {
+    transform: translateY(0);
     opacity: 1;
-    width: 15%;
   }
 }
 .delay-1 {
@@ -335,16 +341,10 @@ a {
   animation: slideup 9s;
 }
 
-@keyframes slideup {
-  0% {
-    transform: translateY(30px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+.delay-10 {
+  animation: slideup 10s;
 }
+
 /*header index*/
 .logo {
   display: flex;
@@ -610,14 +610,25 @@ a {
 }
 .menu__card--description {
   height: 69px;
-  padding: 15px 15px;
+  padding: 15px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
 }
+.menu__card--title {
+  width: 85%;
+  padding-left: 10px;
+}
+.menu__card--title .overflow {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
 .menu__card--price {
   align-self: flex-end;
+  width: 10%;
+  text-align: center;
 }
 
 /*TABLETTE RESPONSIVE*/
