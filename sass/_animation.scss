@@ -60,7 +60,7 @@
 
   &:hover {
     opacity: 0.8;
-    box-shadow: darken ($button-shadow, 0.35);
+    box-shadow: $dark-button-shadow;
   }
 }
 // Taille CTA pour pages restaurants
@@ -71,6 +71,10 @@
     @include cta($width: 186px);
   }
 }
+.order:hover {
+    opacity: 0.8;
+    box-shadow: $dark-button-shadow;
+  }
 
 // Animation coeur
 .card-contain {
@@ -95,63 +99,70 @@
 
 // Animation bouton vert
 .menu__card {
-  position: relative;
+  // position: relative;
   &--check {
     background-color: $tertiary-color;
-    width: 60px;
+    width: 0;
     height: 70px;
     border-radius: 0 15px 15px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    right: 0;
+    // position: absolute;
+    // right: 0;
     opacity: 0;
+    transition: all 1s ease;
   }
   &:hover &--check {
-    animation: checkbox 1s;
-  }
-}
-
-@keyframes checkbox {
-  from {
-    opacity: 0;
-    width: 0;
-  }
-  to {
+    // animation: checkbox 1s both;
     opacity: 1;
     width: 15%;
+    transition: all 1s ease;
+  }
+  &:hover &--title {
+    width: 70%;
   }
 }
 
+// @keyframes checkbox {
+//   0% {
+//     opacity: 0;
+//     width: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//     width: 15%;
+//   }
+// }
+
 // Animation menu__card
-.delay-1 {
-  animation: slideup 1s;
-}
-.delay-2 {
-  animation: slideup 2s;
-}
-.delay-3 {
-  animation: slideup 3s;
-}
-.delay-4 {
-  animation: slideup 4s;
-}
-.delay-5 {
-  animation: slideup 5s;
-}
-.delay-6 {
-  animation: slideup 6s;
-}
-.delay-7 {
-  animation: slideup 7s;
-}
-.delay-8 {
-  animation: slideup 8s;
-}
-.delay-9 {
-  animation: slideup 9s;
-}
+// .delay-1 {
+//   animation: slideup 1s;
+// }
+// .delay-2 {
+//   animation: slideup 2s;
+// }
+// .delay-3 {
+//   animation: slideup 3s;
+// }
+// .delay-4 {
+//   animation: slideup 4s;
+// }
+// .delay-5 {
+//   animation: slideup 5s;
+// }
+// .delay-6 {
+//   animation: slideup 6s;
+// }
+// .delay-7 {
+//   animation: slideup 7s;
+// }
+// .delay-8 {
+//   animation: slideup 8s;
+// }
+// .delay-9 {
+//   animation: slideup 9s;
+// }
 
 @keyframes slideup {
   0% {
@@ -161,5 +172,12 @@
   100% {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+
+@for $i from 1 through 10 {
+  .delay-#{$i}{
+    animation: slideup 1s * $i ;
   }
 }
