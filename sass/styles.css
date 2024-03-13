@@ -182,7 +182,7 @@ a {
   border: 10px solid transparent;
   border-top-color: #ff79da;
   border-radius: 50%;
-  animation: spin 1s linear 0s 3; /*tourne de suite à 1s sans delay 0s et 5 tours*/
+  animation: spin 1s linear 3;
 }
 
 @keyframes spin {
