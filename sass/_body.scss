@@ -146,7 +146,7 @@ h2{
   padding-bottom: 10px ;
 }
 h3{
-  @include index($size: 1.1rem)
+  @include index($size: 1rem)
 }
 p{
   @include index($size: 0.85rem, $weight: 300)
