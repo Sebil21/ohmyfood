@@ -102,7 +102,7 @@
   // position: relative;
   &--check {
     background-color: $tertiary-color;
-    width: 50px;
+    width: 0;
     // height: 70px;
     border-radius: 0 15px 15px 0;
     display: flex;
@@ -110,34 +110,37 @@
     align-items: center;
     // position: absolute;
     // right: 0;
-    opacity: 1;
-    margin-right: -52px;
+    opacity: 0;
+    // margin-right: -52px;
     transition: all 1s ease;
-    z-index: -999;
+
   }
-  &:hover &--check {
+  &:hover &--check  {
     // animation: checkbox 1s both;
     // opacity: 1;
     // width: 15%;
     transition: all 1s ease;
-    margin: 0;
-    z-index: 999;
+    // margin: 0;
+    // z-index: 1;
+    opacity: 1;
+    width: 50px;
   }
   &:hover &--title {
-    width: 80%;
+    width: 70%;
   }
 }
 
+
 // @keyframes checkbox {
-//   0% {
-//     opacity: 0;
-//     width: 0;
-//   }
-//   100% {
-//     opacity: 1;
-//     width: 15%;
-//   }
-// }
+//    0% {
+//      opacity: 0;
+//      width: 0;
+//    }
+//    100% {
+//      opacity: 1;
+//      width: 15%;
+//    }
+//  }
 
 // Animation menu__card
 // .delay-1 {

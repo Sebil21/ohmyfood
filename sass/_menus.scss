@@ -50,7 +50,7 @@
   }
   &--title {
     width: 85%;
-    // padding-left: 10px; à remettre
+    // padding-left: 10px;
     .overflow {
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -60,7 +60,7 @@
   &--price {
     align-self: flex-end;
     flex-wrap: nowrap;
-    // width: 10%;
+    // width: 15%;
     // text-align: center;
   }
  

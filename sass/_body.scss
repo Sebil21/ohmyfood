@@ -126,11 +126,12 @@ a {
   top: 15px;
   left: 25px ;
 }
-.fa-circle-check {
+.fa-check {
   color: $tertiary-color;
   background: white;
-  font-size: 25px;
+  font-size: 13px;
   border-radius: 50%;
+  padding: 3px;
 }
 .main-img{
   width: 100%;
