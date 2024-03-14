@@ -37,34 +37,38 @@
   background: white;
   border-radius: 15px;
   box-shadow: $card-shadow;
+  display: flex;
+  justify-content: space-between;
   &--description {
     height: 69px;
-    padding: 15px 0;
+    width: 100%;
+    padding: 11px ;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: nowrap;
   }
-  &--title{
+  &--title {
     width: 85%;
-    padding-left: 10px;
+    // padding-left: 10px; à remettre
     .overflow {
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
-  
     }
   }
   &--price {
     align-self: flex-end;
-    width: 10%;
-    text-align: center;
+    flex-wrap: nowrap;
+    // width: 10%;
+    // text-align: center;
   }
+ 
+  
 }
 
-
 /*TABLETTE RESPONSIVE*/
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
   .container {
     display: flex;
     align-items: center;
@@ -83,14 +87,13 @@
   .menu-container {
     width: 70%;
   }
-  }
+}
 
 // /*DESKTOP RESPONSIVE*/
 @media screen and (min-width: 1024px) {
   .restaurant__container {
-      .fa-heart {
-        right: 30%;
-      }
+    .fa-heart {
+      right: 30%;
     }
   }
-
+}
